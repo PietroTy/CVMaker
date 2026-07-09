@@ -429,6 +429,37 @@ with st.sidebar:
 # Funções auxiliares
 # ─────────────────────────────────────────────────────────────────────────────
 
+def reduzir_fontes_docx(docx_bytes: bytes, fator: float = 0.85) -> bytes:
+    """
+    Reduz todos os tamanhos de fonte (w:sz / w:szCs) no DOCX pelo fator dado.
+    Valores em half-points (20 = 10pt). Mínimo de 14 half-points (7pt).
+    Usa apenas zipfile + re — sem dependências externas.
+    """
+    import zipfile, io, re as _re
+
+    def processar_xml(content: str) -> str:
+        def substituir(m):
+            tag = m.group(1)
+            try:
+                val = int(m.group(2))
+                novo = max(int(round(val * fator)), 14)
+                return f'<w:{tag} w:val="{novo}"/>'
+            except ValueError:
+                return m.group(0)
+        return _re.sub(r'<w:(sz|szCs)\s+w:val="(\d+)"\s*/>', substituir, content)
+
+    buf_in  = io.BytesIO(docx_bytes)
+    buf_out = io.BytesIO()
+    with zipfile.ZipFile(buf_in, "r") as zin:
+        with zipfile.ZipFile(buf_out, "w", zipfile.ZIP_DEFLATED) as zout:
+            for name in zin.namelist():
+                data = zin.read(name)
+                if name in ("word/document.xml", "word/styles.xml"):
+                    data = processar_xml(data.decode("utf-8", errors="replace")).encode("utf-8")
+                zout.writestr(name, data)
+    return buf_out.getvalue()
+
+
 def converter_docx_para_pdf(docx_bytes: bytes) -> bytes | None:
     import subprocess
     import tempfile
@@ -753,6 +784,9 @@ if adaptar_btn:
                 else:
                     zout.writestr(name, data)
         docx_bytes = buf_out.getvalue()
+
+        # Compacta as fontes em 15% para caber em 2 páginas
+        docx_bytes = reduzir_fontes_docx(docx_bytes, fator=0.85)
 
         progress_bar.progress(100)
         status_placeholder.success("✅ Currículo adaptado com sucesso!")
