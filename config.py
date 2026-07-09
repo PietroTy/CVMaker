@@ -15,9 +15,9 @@ except ImportError:
 # ──────────────────────────────────────────
 # App
 # ──────────────────────────────────────────
-APP_NOME    = "CV Adapter"
+APP_NOME    = "CVMaker"
 APP_SUB     = "Adapte seu currículo para qualquer vaga com IA"
-APP_AUTOR   = "CV Adapter"
+APP_AUTOR   = "CVMaker"
 APP_ANO     = "2025"
 
 # ──────────────────────────────────────────

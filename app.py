@@ -1,5 +1,5 @@
 """
-app.py — CV Adapter
+app.py — CVMaker
 Adapta seu currículo DOCX para vagas específicas usando Claude AI.
 Interface ultra-clean e de alta estética, focada 100% na produtividade.
 """
@@ -20,7 +20,7 @@ load_dotenv()
 # Configuração da página
 # ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="CV Adapter",
+    page_title="CVMaker",
     page_icon="🎯",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -434,33 +434,36 @@ def converter_docx_para_pdf(docx_bytes: bytes) -> bytes | None:
     import tempfile
     import os
     try:
-        # Tenta encontrar soffice ou libreoffice no PATH do Linux
         binario = None
         for cmd in ["soffice", "libreoffice"]:
             if subprocess.run(["which", cmd], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0:
                 binario = cmd
                 break
-        
+
         if not binario:
             return None
-            
+
         with tempfile.TemporaryDirectory() as tmpdir:
             docx_path = os.path.join(tmpdir, "curriculo.docx")
+            profile_dir = os.path.join(tmpdir, "lo_profile")
+            os.makedirs(profile_dir, exist_ok=True)
+
             with open(docx_path, "wb") as f:
                 f.write(docx_bytes)
-                
-            # Executa a conversão headless
+
             process = subprocess.run([
                 binario,
                 "--headless",
+                "--norestore",
+                f"-env:UserInstallation=file://{profile_dir}",
                 "--convert-to", "pdf",
                 "--outdir", tmpdir,
                 docx_path
-            ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            
+            ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=60)
+
             if process.returncode != 0:
                 return None
-                
+
             pdf_path = os.path.join(tmpdir, "curriculo.pdf")
             if os.path.exists(pdf_path):
                 with open(pdf_path, "rb") as f:
@@ -527,7 +530,7 @@ def renderizar_bloco(chave: str, original, adaptado):
 # Cabeçalho do App com botão de configuração
 col_header_title, col_header_btn = st.columns([3, 1])
 with col_header_title:
-    st.markdown('<h1 class="main-title">🎯 CV Adapter</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-title">🎯 CVMaker</h1>', unsafe_allow_html=True)
     st.markdown('<p class="main-subtitle">Cole a descrição da vaga e gere instantaneamente seu currículo cirurgicamente personalizado com IA. ⚡</p>', unsafe_allow_html=True)
 with col_header_btn:
     show_editor = st.toggle(
