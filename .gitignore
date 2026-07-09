@@ -1,0 +1,27 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente (NUNCA commitar a chave da API)
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Dados pessoais do usuário (perfil privado — não vai ao repo público)
+perfil_usuario.json
+
+# Perfil padrão de backup pessoal (manter no repo apenas se for público/exemplo)
+# perfil_usuario_padrao.json
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Sistema
+.DS_Store
+Thumbs.db

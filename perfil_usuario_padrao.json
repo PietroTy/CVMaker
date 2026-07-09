@@ -1,0 +1,281 @@
+{
+  "dados_pessoais": {
+    "nome": "Pietro Turci Moraes Martins",
+    "cargo": "Full-Stack Developer & AI Researcher | React · TypeScript · Python · LLMs · n8n",
+    "email": "pietro.turcimm@gmail.com",
+    "telefone": "(11)99884-8997",
+    "localizacao": "São João da Boa Vista, SP (residência oficial em São Paulo - Capital, com total mobilidade para atuação presencial na capital)",
+    "linkedin": "https://br.linkedin.com/in/pietro-turci-2a419229a",
+    "github": "https://github.com/PietroTy",
+    "website": "https://pietroty.github.io/PietroTy/",
+    "idade": "19 anos"
+  },
+  "resumo": "Desenvolvedor Full-Stack, Engenheiro de Dados e Pesquisador em IA com experiência sólida em arquitetura de sistemas, automação inteligente e processamento de dados em larga escala. Graduando em Ciência da Computação pelo IFSP — instituição federal nota máxima (5) no MEC — com formação técnica completa pela ETEC (SP). Combino uma sólida base analítica e matemática (Iniciação Científica na USP/IME, Menção Honrosa OBMEP) com domínio prático de engenharia de software e análise de dados: desde pipelines de ETL robustos consumindo grandes volumes de dados reais (como datasets públicos de CNPJs da Receita Federal) até soluções avançadas de IA generativa (LLMs, agentes n8n). Projetou e liderou a entrega completa de um CRM corporativo integrado ao PowerBI, automatizou fluxos de dados de alta concorrência via WhatsApp e fundei o Escriba (plataforma de geração de textos acadêmicos em produção por pesquisadores da PUC). Portfólio de 12+ projetos de ponta (WebAssembly, Flutter, Python/data science, Big Data). Inglês fluente, excelente comunicação didática, residência em SP Capital e total mobilidade presencial.",
+  "habilidades": {
+    "dev_ia": "Python (Pandas, NumPy, Scikit-Learn), Java, C/C++, C#, JavaScript/TypeScript, Dart, PHP, Shell Script, HTML5/CSS3, SQL (PostgreSQL/Oracle/MySQL/SQLite), Spring Boot, JPA (Hibernate), JSP, React (Hooks, Context API, Router), React Native, Next.js, Angular, jQuery, Flutter, Styled Components, Tailwind CSS, MUI, Node.js, APIs REST, JWT/OAuth, Prompt Engineering, LLMs, Agentes de IA (LangChain, CrewAI), n8n (RPA), Machine Learning, Visão Computacional (OpenCV/CV2), WebAssembly, Streamlit, FFmpeg, Microserviços e Arquitetura MVC, Linguagem R, DAX, Modelagem de Relacionamentos, Power Query (M Language).",
+    "ferramentas": "ETL, Pipelines de Dados, Data Wrangling, Análise de Dados Públicos (CNPJs Receita Federal), Git/GitHub, CI/CD (GitHub Actions), AWS, GCP, Docker, PowerBI, Metodologias Ágeis (Scrum/Kanban), Gestão de Backlog, Testes E2E (Playwright), Testes de Segurança de Software, Testes de Usabilidade, Figma/Design Systems, Web Vitals, Acessibilidade Digital (WCAG, DEIA), Tecnologias Assistivas, Raspberry Pi, Arduino, Sistemas Embarcados, Android Studio, Self-Hosting (Servidores Linux/Minecraft), Google Tag Manager, Stripe API, Evolution API, Chatwoot, Cloudfy, yt-dlp, Integração de Sistemas, CRM (concepção e desenvolvimento), Documentação Técnica, SQL Analytics, Segmentação de Clientes via Machine Learning, Detecção de Anomalias com IA, Análise de Séries Temporais.",
+    "outras": "Inglês Fluente (TOEFL B2, curso completo de inglês no CCAA durante anos + Teachers), Francês Básico (Curso de Francês de 1 ano no CEL da Escola Estadual Senador Paulo Egydio de Oliveira Carvalho), Espanhol Básico, Liderança Técnica, Tomada de Decisão, Gestão de UI/UX, Design Voltado para o Usuário, Suporte Técnico ao Cliente, Design Educacional Inclusivo (ADDIE, DEIA), Pesquisa Aplicada, Metodologia Científica, Análise Crítica, Colaboração Interdisciplinar, Comunicação, Inovação em Fluxos de Produção de Conteúdo, Automação de Processos"
+  },
+  "educacao": [
+    {
+      "instituicao": "IFSP — Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (Campus São João da Boa Vista)",
+      "curso": "Bacharelado em Ciência da Computação (Bachelor of Technology - BTech, Computer Science)",
+      "tipo": "Graduação (Bacharel)",
+      "status": "Em andamento (5º semestre de 8)",
+      "inicio": "Fevereiro 2024",
+      "conclusao_esperada": "Dezembro 2027",
+      "destaque": "Instituição pública federal de excelência, reconhecida com nota máxima (Nota 5) no MEC. Formação de cientista e engenheiro de software com base pesada em fundamentos teóricos: estrutura de dados, teoria da computação, matemática (cálculo, álgebra linear, geometria analítica), sistemas operacionais, redes e áreas avançadas como IA e computação gráfica. Desde o primeiro semestre envolve projetos extensionistas reais para a comunidade externa. TCC com defesa de banca no último ano. Possibilidade de intercâmbio internacional. Participação em grupo extracurricular de competição de drones (Game of Drones Team — área de software/IA) e Iniciação Científica no Projeto COSAIC (IFSP + ENAP)."
+    },
+    {
+      "instituicao": "Faculdade de Tecnologia de São Paulo - FATEC-SP",
+      "curso": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "tipo": "Tecnólogo",
+      "status": "Transferido para IFSP",
+      "inicio": "Janeiro 2024",
+      "conclusao_esperada": "Fevereiro 2024",
+      "destaque": "Breve passagem antes de transferir para o Bacharelado em Ciência da Computação no IFSP. Contato com Design de Software, Resolução de Problemas e fundamentos de Desenvolvimento de Sistemas."
+    },
+    {
+      "instituicao": "ETEC Horácio Augusto da Silveira (São Paulo, SP)",
+      "curso": "Ensino Médio Integrado ao Técnico em Desenvolvimento de Sistemas",
+      "tipo": "Ensino Técnico",
+      "status": "Concluído",
+      "inicio": "",
+      "conclusao_esperada": "Dezembro 2023",
+      "destaque": "Onde nasceu e cresceu (SP capital). Formação técnica completa com alta carga prática, focada no ciclo real de desenvolvimento de software: do planejamento e análise de requisitos até testes, documentação e entrega. Cobriu programação, orientação a objetos, desenvolvimento web full-stack (Angular, React, JS), banco de dados (Oracle SQL), mobile (Android Studio), segurança da informação, sistemas embarcados (Arduino), Python e metodologias ágeis. TCC: projeto real em equipe — Erium."
+    },
+    {
+      "instituicao": "USP — Universidade de São Paulo (Instituto de Matemática e Estatística / IME — Butantã)",
+      "curso": "Iniciação Científica em Matemática e Estatística",
+      "tipo": "Pesquisa / IC",
+      "status": "Concluído",
+      "inicio": "",
+      "conclusao_esperada": "",
+      "destaque": "Programa de iniciação científica voltado para matemática avançada e estatística no IME-USP. Conquistou Menção Honrosa na OBMEP (Olimpíada Brasileira de Matemática das Escolas Públicas)."
+    },
+    {
+      "instituicao": "CCAA Perdizes|Lapa|V. Guilherme",
+      "curso": "Curso Completo de Língua Inglesa + Curso de Teachers",
+      "tipo": "Formação de Idioma / Extensão",
+      "status": "Concluído",
+      "inicio": "",
+      "conclusao_esperada": "",
+      "destaque": "Estudo aprofundado de inglês durante anos, cobrindo fluência oral, gramatical e escrita de alta performance. Adicionalmente, concluiu o curso completo de Teachers, habilitando-o para docência e aplicação de metodologias dinâmicas/imersivas de ensino."
+    },
+    {
+      "instituicao": "CEL (Centro de Estudo de Línguas) da Escola Estadual Senador Paulo Egydio de Oliveira Carvalho",
+      "curso": "Curso de Língua Francesa",
+      "tipo": "Formação de Idioma / Extensão",
+      "status": "Concluído",
+      "inicio": "",
+      "conclusao_esperada": "",
+      "destaque": "Conclusão de curso anual (1 ano) focado em comunicação em língua francesa, pronúncia, estruturas gramaticais essenciais e vocabulário cotidiano."
+    }
+  ],
+  "experiencias": [
+    {
+      "empresa": "Engaja Soluções Corporativas",
+      "cargo": "Consultor em Dados e Desenvolvimento (Encarregado pelo Setor de TI)",
+      "periodo": "Julho 2026 – Atualmente",
+      "localizacao": "São João da Boa Vista, SP, Brasil · Presencial",
+      "tipo_contrato": "Efetivo",
+      "bullets": [
+        "Líder e responsável direto pelo setor de TI da empresa, encarregado da governança tecnológica, infraestrutura de redes/dados e coordenação técnica de projetos e squads.",
+        "Conduziu a digitalização completa de processos operacionais internos e externos da companhia, reduzindo o trabalho manual através de arquiteturas eficientes de dados.",
+        "Comercializou e expandiu a entrega de nosso CRM corporativo personalizado para novos clientes de grande porte, operando diretamente com bancos transacionais PostgreSQL.",
+        "Desenvolveu painéis integrados e personalizados de BI (Business Intelligence) e relatórios executivos sob demanda diretamente no PostgreSQL para a tomada de decisões corporativas estratégicas de clientes.",
+        "Lidera a especificação técnica e validação final de integrações de software e sistemas de alta performance."
+      ]
+    },
+    {
+      "empresa": "Engaja Soluções Corporativas",
+      "cargo": "Estagiário em Automações IA",
+      "periodo": "Março 2026 – Junho 2026",
+      "localizacao": "São João da Boa Vista, SP, Brasil · Presencial",
+      "tipo_contrato": "Estágio",
+      "bullets": [
+        "Protagonista no ciclo de vida completo de produtos digitais — da concepção estratégica à entrega em produção — com foco em automações inteligentes, IA generativa e desenvolvimento fullstack de alta performance.",
+        "Liderou integralmente a arquitetura, desenvolvimento e deploy de um CRM corporativo customizado, integrando fluxos de dados em tempo real ao PowerBI para dashboards executivos de tomada de decisão — resultando em ganho mensurável de eficiência operacional para a empresa e seus clientes.",
+        "Projetou e implementou pipelines de automação inteligente baseados em LLMs e agentes de IA, reduzindo significativamente o tempo de processos manuais e rotinas administrativas.",
+        "Arquitetou integrações complexas entre sistemas internos e APIs externas (n8n, Python, PostgreSQL, Cloudfy, Evolution API, Chatwoot), gerando fluxos de dados robustos e de baixa latência.",
+        "Desenvolveu e implantou agentes conversacionais de IA para atendimento automatizado via WhatsApp em escala, com gestão de múltiplos clientes simultâneos e suporte técnico/consultivo ao cliente final."
+      ]
+    },
+    {
+      "empresa": "MakeLemonad (Empresa de Marketing Digital)",
+      "cargo": "Freelancer — QA Tester e Revisor de Código",
+      "periodo": "2026 – Atualmente",
+      "localizacao": "Remoto",
+      "tipo_contrato": "Freelance",
+      "bullets": [
+        "Revisão crítica de código e auditoria de qualidade em novas features de projetos web em produção para empresa de marketing digital com clientes de grande porte.",
+        "Execução de testes de segurança ofensivos e defensivos (penetration testing, análise de vulnerabilidades OWASP) para garantir a integridade e robustez das aplicações antes do deploy em produção.",
+        "Validação funcional, exploratória e de regressão de interfaces e funcionalidades em ambientes de staging, documentando bugs e propondo melhorias de UX."
+      ]
+    },
+    {
+      "empresa": "Consultoria Acadêmica Independente (PUC)",
+      "cargo": "Prestador de Serviço — Engenheiro de IA Aplicada a Textos Acadêmicos",
+      "periodo": "2026 – Atualmente",
+      "localizacao": "Remoto",
+      "tipo_contrato": "Prestação de Serviço",
+      "bullets": [
+        "Consultoria técnica especializada em IA generativa para um professor doutorando da PUC, utilizando o Escriba — plataforma proprietária de geração de textos acadêmicos de alto rigor via múltiplos LLMs.",
+        "Engenharia de Prompt avançada com arquitetura multi-camada de verificação para garantir verdade factual, zero alucinações e formatação ABNT impecável em papers acadêmicos de nível doutorado.",
+        "Evolução contínua da plataforma Escriba com novas features sob demanda, incluindo pipelines de checagem cruzada e templates acadêmicos especializados."
+      ]
+    },
+    {
+      "empresa": "Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - IFSP / ENAP (Projeto COSAIC)",
+      "cargo": "Pesquisador de Inovação e Iniciação Científica (Bolsista) — IA, Acessibilidade e Design Educacional",
+      "periodo": "Abril 2025 – Janeiro 2026",
+      "localizacao": "São Paulo, Brasil · Remota",
+      "tipo_contrato": "Estágio / Bolsa IC",
+      "bullets": [
+        "Pesquisador bolsista de destaque no projeto COSAIC (IFSP + ENAP), atuando na vanguarda do desenvolvimento de soluções inovadoras baseadas em IA para produção, revisão e adaptação de conteúdos educacionais digitais em escala nacional.",
+        "Fundou e arquitetou o Escriba — plataforma pioneira de geração de textos acadêmicos confiáveis via múltiplos LLMs especializados em português brasileiro, com arquitetura proprietária anti-alucinação e pipelines de verificação de qualidade — hoje utilizada em produção por pesquisadores da PUC.",
+        "Conduziu pesquisa aplicada em LLMs e IA generativa para automação inteligente de fluxos de produção de conteúdo educacional, garantindo qualidade, consistência e alinhamento pedagógico rigoroso.",
+        "Desenvolveu ferramentas completas em Python/Streamlit conectadas a múltiplas APIs de modelos de linguagem, otimizando drasticamente o fluxo de produção de conteúdo e reduzindo trabalho manual.",
+        "Aplicação de design educacional inclusivo e acessibilidade digital de referência, com adaptação de materiais para tecnologias assistivas e condução de testes de usabilidade.",
+        "Revisão técnica e pedagógica de conteúdos para a Escola Virtual do Governo (EV.G/ENAP), utilizando metodologias ADDIE, WCAG e DEIA com rigor científico."
+      ]
+    },
+    {
+      "empresa": "CCAA Perdizes|Lapa|V. Guilherme",
+      "cargo": "Professor de Inglês",
+      "periodo": "Janeiro 2024 – Abril 2025",
+      "localizacao": "São Paulo, SP, Brasil · Presencial",
+      "tipo_contrato": "Freelance",
+      "bullets": [
+        "Ministração de aulas dinâmicas e imersivas de inglês para turmas de diversos níveis, com fluência certificada internacionalmente (TOEFL B2), promovendo comunicação efetiva, pensamento crítico e aprendizado prático orientado a resultados.",
+        "Desenvolvimento e aplicação de metodologias de ensino inovadoras e engajadoras, criando um ambiente positivo e interativo que maximiza a retenção e o progresso dos alunos.",
+        "Preparação direcionada de alunos para exames e certificações internacionais com taxa de aprovação de 100%.",
+        "Formação completa no idioma pelo CCAA, incluindo certificação do curso de Teachers — qualificação para docência e treinamento de instrutores.",
+        "Competências transferíveis: comunicação interpessoal avançada, didática, gestão de sala, adaptação de conteúdo para diferentes perfis e apresentação de ideias complexas de forma acessível."
+      ]
+    },
+    {
+      "empresa": "IFSP — Game of Drones Team (Grupo Extracurricular de Competição de Drones)",
+      "cargo": "Desenvolvedor de Software e IA para Drone Autônomo",
+      "periodo": "2024 – 2025",
+      "localizacao": "São João da Boa Vista, SP",
+      "tipo_contrato": "Extracurricular",
+      "bullets": [
+        "Integrante da equipe de software do Game of Drones Team — equipe acadêmica de drones competitivos de São João da Boa Vista.",
+        "Desenvolvimento de algoritmos de Machine Learning e Visão Computacional (Python, OpenCV/CV2) para guiar o drone de forma autônoma durante competições.",
+        "Integração de software embarcado em Raspberry Pi para processamento em tempo real de imagens e tomada de decisão autônoma do drone."
+      ]
+    },
+    {
+      "empresa": "USP — Instituto de Matemática e Estatística (IME/Butantã)",
+      "cargo": "Iniciação Científica em Matemática e Estatística",
+      "periodo": "Período anterior ao ingresso no IFSP",
+      "localizacao": "São Paulo, SP",
+      "tipo_contrato": "IC / Pesquisa",
+      "bullets": [
+        "Menção Honrosa em Iniciação Científica na USP — área de Matemática e Estatística.",
+        "Conquistou Menção Honrosa na OBMEP (Olimpíada Brasileira de Matemática das Escolas Públicas).",
+        "Formação sólida em raciocínio lógico-matemático que fundamenta toda a carreira em Ciência da Computação."
+      ]
+    }
+  ],
+  "projetos": [
+    {
+      "nome": "Portfólio Web Interativo",
+      "descricao": "Aplicação fullstack em React e JavaScript com deploy automatizado via CI/CD (GitHub Actions). Inclui chatbot Ty integrado via API de LLM customizado com dados biográficos e profissionais para responder dúvidas sobre o autor. Design responsivo multi-dispositivo e suporte multilíngue (PT/EN). Deployado e acessível publicamente.",
+      "tecnologias": "React, JavaScript, GitHub Actions (CI/CD), API de LLM (GPT), Design Responsivo, i18n",
+      "link": "https://pietroty.github.io/PietroTy/",
+      "repo": "https://github.com/PietroTy/PietroTy"
+    },
+    {
+      "nome": "Escriba AI — Sistema de Geração de Textos Acadêmicos",
+      "descricao": "Projeto de pesquisa científica desenvolvido para a EV.G (Escola Virtual do Governo). Usa APIs de LLMs especializados em português brasileiro para gerar e formatar textos técnicos acadêmicos sob medida, com políticas de verificação de qualidade e arquitetura anti-alucinação. Nasceu durante IC no projeto COSAIC (IFSP + ENAP). Atualmente sendo utilizado em produção por um professor doutorando na PUC como ferramenta de consultoria acadêmica.",
+      "tecnologias": "Python, Streamlit, Engenharia de Prompt Avançada, Múltiplas APIs de LLMs, Maritaca AI",
+      "link": "https://github.com/PietroTy/Escriba",
+      "repo": "https://github.com/PietroTy/bot-maritaca"
+    },
+    {
+      "nome": "Bot de WhatsApp — Agente Conversacional Multifuncional com IA",
+      "descricao": "Bot multifuncional em JavaScript para uso pessoal e comercial. Respostas automáticas via IA (Maritaca LLM) com histórico de conversa persistente, jornal automático VINIMUNEWS para grupos, jogos interativos (Termo, Dueto, Quarteto), criação de stickers via FFmpeg (imagens, GIFs, vídeos), integração com YouTube API. Arquitetura modular orientada a handlers e serviços independentes. Usa whatsapp-web.js, axios, sharp, openai e qrcode-terminal.",
+      "tecnologias": "JavaScript, Node.js, whatsapp-web.js, Maritaca AI, FFmpeg, sharp, APIs REST",
+      "link": "https://github.com/PietroTy/bot-whatsapp",
+      "repo": "https://github.com/PietroTy/bot-whatsapp"
+    },
+    {
+      "nome": "cHUB — Hub de Jogos em C / WebAssembly",
+      "descricao": "Hub de minijogos para navegador com 9+ jogos desenvolvidos manualmente em C com a biblioteca Raylib: Snacke (Snake), Tectris (Tetris), Crappy Bird (Flappy Bird) e outros. Todos compilados e portados para a web via WebAssembly (Wasm). Inspirado nos projetos do Prof. Dr. David Buzatto. Foco em performance, simplicidade e estética coesa. Deployado e acessível publicamente.",
+      "tecnologias": "C, Raylib, WebAssembly (Wasm), HTML/CSS/JS (frontend do hub)",
+      "link": "https://pietroty.github.io/Chub/",
+      "repo": ""
+    },
+    {
+      "nome": "LaPlayer — Clone do Spotify (Aplicativo Completo)",
+      "descricao": "Aplicativo self-hosted completo para download e reprodução de músicas, um clone do Spotify desenvolvido inteiramente do zero. Integração com a API do Spotify para metadados, extração de mídia via yt-dlp, autenticação avançada via cookies de sessão. Desenvolvimento intensivo de UI/UX com foco na experiência do usuário, gerenciado via metodologias ágeis (Kanban).",
+      "tecnologias": "Dart, Flutter, API do Spotify, yt-dlp, Autenticação via Cookies, Self-Hosting, Kanban",
+      "link": "",
+      "repo": ""
+    },
+    {
+      "nome": "Erium — Toolkit de Viagens (TCC do Técnico)",
+      "descricao": "TCC do curso técnico da ETEC, desenvolvido em equipe. Aplicação full-stack online de uma empresa fictícia de serviços para viagens aéreas: cálculo de peso de bagagem, validação de passaporte, normas de voo e outras ferramentas. Banco de dados SQL aplicado, consumo de múltiplas APIs externas e uma API própria (manufaturada pelo grupo). Experiência marcante em trabalho em equipe, versionamento paralelo (Git) e entrega real.",
+      "tecnologias": "JavaScript, React, Java, SQL, APIs REST (consumo e desenvolvimento), Node.js",
+      "link": "",
+      "repo": ""
+    },
+    {
+      "nome": "Bot de Discord — Administração e Entretenimento",
+      "descricao": "Bot de administração e entretenimento para Discord, usando a API oficial. Sistema robusto de comandos, ferramentas de moderação e jogos interativos. Feito em JavaScript.",
+      "tecnologias": "JavaScript, Node.js, Discord.js, API oficial do Discord",
+      "link": "",
+      "repo": "https://github.com/PietroTy/bot-discord"
+    },
+    {
+      "nome": "Bot de Figurinhas para WhatsApp",
+      "descricao": "Grupo e bot para WhatsApp focado em geração de stickers a partir de imagens, GIFs e vídeos. Criado em sinergia com o WhatsApp Bot principal. Usa FFmpeg e múltiplas APIs em JavaScript. Inspirado em projeto de Matheus Toniolli. Oferecido como serviço para amigos.",
+      "tecnologias": "JavaScript, Node.js, FFmpeg, APIs de processamento de mídia",
+      "link": "https://chat.whatsapp.com/KAg83JlOyWSGoHLBOLwrR8",
+      "repo": ""
+    },
+    {
+      "nome": "Servidores Java de Minecraft (Self-Hosted — PitCraft)",
+      "descricao": "Hospedagem e administração própria de servidores de Minecraft rodando em infraestrutura pessoal (self-hosted). Funciona por temporadas — mapa, modpack e configurações mudam a cada uma. Configuração de plugins, gestão de comunidade e integração com bots de atendimento automatizado via Discord/WhatsApp.",
+      "tecnologias": "Java, Linux, Self-Hosting, Administração de Servidores, Networking",
+      "link": "https://chat.whatsapp.com/GQ1gUaywKX6CUQZtiItgEh",
+      "repo": ""
+    },
+    {
+      "nome": "Drone Autônomo — Software de Competição (Game of Drones)",
+      "descricao": "Desenvolvimento do software para guiar um drone autônomo em competições (equipe Game of Drones Team - IFSP SJBV). Implementação de algoritmos de Machine Learning e Visão Computacional em Python para navegação autônoma e tomada de decisão em tempo real, embarcados em Raspberry Pi.",
+      "tecnologias": "Python, OpenCV (CV2), Machine Learning, Raspberry Pi, Visão Computacional",
+      "link": "",
+      "repo": ""
+    },
+    {
+      "nome": "CV Adapter — Adaptador Inteligente de Currículos",
+      "descricao": "Sistema em Python/Streamlit que adapta cirurgicamente currículos DOCX para vagas específicas usando IA (Sabiá-4 da Maritaca). Preserva 100% da formatação original do documento Word, manipulando diretamente o XML interno do DOCX. Inclui banco de dados pessoal JSON para personalização total.",
+      "tecnologias": "Python, Streamlit, Maritaca AI (Sabiá-4), XML/OOXML, zipfile",
+      "link": "",
+      "repo": ""
+    },
+    {
+      "nome": "Pipeline ETL e Engine de Análise de CNPJs Públicos",
+      "descricao": "Arquitetura e desenvolvimento de um pipeline robusto de ETL para extração, tratamento, higienização, cruzamento e carga da base oficial de dados abertos da Receita Federal (CNPJs brasileiros ativos/inativos, sócios e CNAEs). Desenvolvido para processar milhões de registros reais e habilitar análises de mercado, detecção de padrões empresariais e inteligência de negócios de forma escalável.",
+      "tecnologias": "Python, Pandas, NumPy, PostgreSQL, SQL, ETL Pipelines, Data Wrangling, Modelagem Dimensional",
+      "link": "",
+      "repo": ""
+    }
+  ],
+  "certificacoes": [
+    "Microsoft Power BI Para Business Intelligence e Data Science — Data Science Academy (72h)",
+    "PowerBI e Ciência de Dados",
+    "Segurança de Software",
+    "Desenvolvimento Web",
+    "Menção Honrosa na OBMEP (Olimpíada Brasileira de Matemática das Escolas Públicas)",
+    "Menção Honrosa em Iniciação Científica na USP — área de Matemática e Estatística",
+    "TOEFL — nível B2 (avançado)",
+    "Certificado de fluência em inglês pelo CCAA + curso completo de Teachers"
+  ],
+  "preferencias": {
+    "instrucoes_customizadas": "Sempre adote um tom profissional, técnico e focado em resultados tangíveis. Enfatize competências de desenvolvimento de software, arquitetura de sistemas e Inteligência Artificial. Destaque a combinação única de base teórica sólida (Ciência da Computação no IFSP nota 5 MEC, Matemática/OBMEP, pesquisa na USP/IME) com aplicação prática intensiva (projetos pessoais completos, do baixo nível em C/Raylib/WebAssembly até IA avançada com LLMs). Valorize o perfil autodidata e hands-on: 9+ jogos em C/WebAssembly no cHUB, um clone do Spotify inteiro em Dart/Flutter, bots multiplataforma com LLMs (WhatsApp, Discord, Telegram), servidores Minecraft self-hosted, drone autônomo com visão computacional (Game of Drones Team). Quando relevante, mencione a experiência em liderança técnica de projetos corporativos (CRM na Engaja) e a capacidade de entregar soluções end-to-end. O candidato tem residência em São Paulo Capital e total disponibilidade para mudança/trabalho presencial na capital. CRÍTICO: O currículo final gerado deve ser extremamente conciso, focado e direto de modo a caber com folga em NO MÁXIMO 2 páginas. Evite textos longos, verbosos ou prolixos. Nunca invente informações para experiências ou projetos — use apenas o que está no banco de dados. No entanto, para as habilidades (skills_dev e skills_tools), você DEVE incluir todas as habilidades, ferramentas e tecnologias exigidas pela vaga (usando exatamente os mesmos termos/palavras descritos na vaga), mesmo que elas não constem explicitamente no banco de dados do candidato, complementando-as com as habilidades reais dele."
+  }
+}
