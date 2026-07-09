@@ -47,18 +47,25 @@ def salvar_perfil(dados: dict, caminho: pathlib.Path = PROFILE_PATH):
 
 
 def carregar_perfil(caminho: pathlib.Path = PROFILE_PATH) -> dict:
-    """Carrega o perfil do JSON ou retorna a estrutura vazia se não existir."""
+    """Carrega o perfil do JSON. Se não existir, tenta o perfil padrão (padrao.json).
+    Só cria estrutura vazia como último recurso."""
     if not caminho.exists():
-        # Tenta criar com valores padrões vazios
-        dados = obter_estrutura_vazia()
-        salvar_perfil(dados, caminho)
-        return dados
-    
+        # Tenta carregar o perfil padrão (commited no repo, serve como default público)
+        caminho_padrao = caminho.parent / "perfil_usuario_padrao.json"
+        if caminho_padrao.exists():
+            try:
+                with open(caminho_padrao, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        # Último recurso: estrutura vazia
+        return obter_estrutura_vazia()
+
     try:
         with open(caminho, "r", encoding="utf-8") as f:
             dados = json.load(f)
-            
-            # Garante que chaves essenciais existam (retrocompatibilidade/preenchimento automático)
+
+            # Garante que chaves essenciais existam (retrocompatibilidade)
             estrutura_padrao = obter_estrutura_vazia()
             for k, v in estrutura_padrao.items():
                 if k not in dados:
