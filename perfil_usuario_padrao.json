@@ -78,7 +78,7 @@
       "cargo": "Consultor em Dados e Desenvolvimento",
       "periodo": "Julho 2026 – Atualmente",
       "localizacao": "São João da Boa Vista, SP, Brasil · Presencial",
-      "tipo_contrato": "Efetivo",
+      "tipo_contrato": "PJ",
       "bullets": [
         "Líder e responsável direto pelo setor de TI da empresa, encarregado da governança tecnológica, infraestrutura de redes/dados e coordenação técnica de projetos e squads.",
         "Conduziu a digitalização completa de processos operacionais internos e externos da companhia, reduzindo o trabalho manual através de arquiteturas eficientes de dados.",
@@ -106,7 +106,7 @@
       "cargo": "Freelancer — QA Tester e Revisor de Código",
       "periodo": "2026 – Atualmente",
       "localizacao": "Remoto",
-      "tipo_contrato": "Freelance",
+      "tipo_contrato": "PJ",
       "bullets": [
         "Revisão crítica de código e auditoria de qualidade em novas features de projetos web em produção para empresa de marketing digital com clientes de grande porte.",
         "Execução de testes de segurança ofensivos e defensivos (penetration testing, análise de vulnerabilidades OWASP) para garantir a integridade e robustez das aplicações antes do deploy em produção.",
