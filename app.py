@@ -689,8 +689,6 @@ template_path = os.path.join(os.path.dirname(__file__), "CurrículoVbra.docx")
 api_key = get_api_key()
 
 if adaptar_btn:
-    # Recarrega o perfil do disco para garantir que alterações manuais no JSON sejam lidas
-    st.session_state["perfil_edicao"] = carregar_perfil()
     api_key = get_api_key()
 
     # Validações
