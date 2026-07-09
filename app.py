@@ -782,43 +782,43 @@ if "docx_bytes" in st.session_state:
             st.session_state["pdf_bytes"] = converter_docx_para_pdf(st.session_state["docx_bytes"])
             
     pdf_bytes = st.session_state.get("pdf_bytes")
+
+    # Nome do arquivo baseado no nome da pessoa
+    _nome_perfil = st.session_state["perfil_edicao"].get("dados_pessoais", {}).get("nome", "curriculo")
+    _nome_slug = "curriculo_" + "_".join(_nome_perfil.split()[:2])  # ex: curriculo_Pietro_Turci
+    import re as _re
+    _nome_slug = _re.sub(r"[^a-zA-Z0-9_\-]", "", _nome_slug.replace(" ", "_"))
     
     if pdf_bytes:
-        col_word, col_pdf = st.columns(2)
-        with col_word:
-            st.download_button(
-                label="⬇️ Baixar em Word (.docx)",
-                data=st.session_state["docx_bytes"],
-                file_name="curriculo_adaptado.docx",
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                use_container_width=True,
-            )
-        with col_pdf:
-            st.download_button(
-                label="⬇️ Baixar em PDF (.pdf)",
-                data=pdf_bytes,
-                file_name="curriculo_adaptado.pdf",
-                mime="application/pdf",
-                use_container_width=True,
-            )
+        # PDF como botão principal de destaque
+        st.download_button(
+            label="⬇️ Baixar Currículo em PDF",
+            data=pdf_bytes,
+            file_name=f"{_nome_slug}.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+            type="primary",
+        )
+        st.markdown("<div style='text-align:center; margin-top: 8px;'>", unsafe_allow_html=True)
+        st.download_button(
+            label="⬇️ Baixar também em Word (.docx)",
+            data=st.session_state["docx_bytes"],
+            file_name=f"{_nome_slug}.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            use_container_width=True,
+        )
+        st.markdown("</div>", unsafe_allow_html=True)
     else:
-        col_dl_btn, col_info = st.columns([1, 1])
-        with col_dl_btn:
-            st.download_button(
-                label="⬇️ Baixar em Word (.docx)",
-                data=st.session_state["docx_bytes"],
-                file_name="curriculo_adaptado.docx",
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                use_container_width=True,
-            )
-        with col_info:
-            st.markdown("""
-            <div style='background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 10px; padding: 16px; color: #f87171; font-size: 0.9rem;'>
-                💡 <b>Dica de Ouro: Quer baixar direto em PDF?</b><br>
-                Instale o <b>LibreOffice Writer</b> no seu Linux para habilitar a exportação direta em PDF com 100% de fidelidade. Execute no seu terminal:<br>
-                <code style='color: #fff; background: #000; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px;'>sudo apt update && sudo apt install -y libreoffice-writer</code>
-            </div>
-            """, unsafe_allow_html=True)
+        # Fallback: só DOCX (PDF falhou — não deve ocorrer no Streamlit Cloud)
+        st.download_button(
+            label="⬇️ Baixar em Word (.docx)",
+            data=st.session_state["docx_bytes"],
+            file_name=f"{_nome_slug}.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            use_container_width=True,
+            type="primary",
+        )
+        st.warning("⚠️ Conversão para PDF não disponível neste ambiente. Abra o .docx e exporte manualmente para PDF.")
 
     st.markdown("<br><h3 style='margin-bottom: 12px;'>🔍 Comparação: Original × Adaptado</h3>", unsafe_allow_html=True)
     st.caption("Confira abaixo as alterações cirúrgicas efetuadas em cada seção:")
