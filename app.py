@@ -508,6 +508,46 @@ def get_api_key() -> str | None:
     return os.environ.get("MARITACA_API_KEY")
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Análise de Keywords da Vaga
+# ─────────────────────────────────────────────────────────────────────────────
+
+STOPWORDS_PT = {
+    "de", "da", "do", "das", "dos", "em", "no", "na", "nos", "nas", "com", "para",
+    "por", "que", "e", "ou", "a", "o", "as", "os", "um", "uma", "uns", "umas", "se",
+    "ao", "aos", "à", "às", "é", "ser", "ter", "sua", "seu", "seus", "suas", "como",
+    "mais", "não", "também", "mas", "bem", "sobre", "entre", "após", "antes",
+    "pela", "pelo", "pelos", "pelas", "este", "esta", "estes", "estas", "isso",
+    "este", "aqui", "ali", "será", "são", "foi", "podem", "deve", "área", "você",
+    "nós", "eles", "elas", "muito", "todos", "toda", "todo", "cada", "nos", "nas",
+    "num", "numa", "neste", "nesta", "nosso", "nossa", "nossos", "nossas",
+    "quando", "onde", "assim", "já", "ainda", "até", "apenas", "tanto", "tal",
+    "the", "and", "or", "of", "in", "to", "a", "an", "for", "with", "on", "at",
+    "from", "by", "is", "are", "be", "was", "were", "have", "has", "will", "can",
+    "that", "this", "we", "you", "our", "your", "it", "its", "as", "if", "not",
+    "work", "team", "experience", "skills", "ability", "strong", "good", "new",
+    "including", "working", "within", "across", "able", "through", "into"
+}
+
+def analisar_keywords_vaga(texto: str, top_n: int = 20) -> list[tuple[str, int]]:
+    """Extrai as N keywords mais frequentes da descrição da vaga, ignorando stopwords."""
+    import re
+    palavras = re.findall(r'[A-Za-záàãâéêíóôõúüçÁÀÃÂÉÊÍÓÔÕÚÜÇ][A-Za-záàãâéêíóôõúüçÁÀÃÂÉÊÍÓÔÕÚÜÇ0-9/+#._-]{1,}', texto)
+    contagem: dict[str, int] = {}
+    for p in palavras:
+        p_norm = p.strip().rstrip('.,:;()[]') 
+        if len(p_norm) < 2:
+            continue
+        if p_norm.lower() in STOPWORDS_PT:
+            continue
+        # Agrupa case-insensitive mas exibe o formato original mais frequente
+        key = p_norm.lower()
+        contagem[key] = contagem.get(key, 0) + 1
+    # Ordena por frequência
+    ordenado = sorted(contagem.items(), key=lambda x: x[1], reverse=True)
+    return ordenado[:top_n]
+
+
 def formatar_nome_bloco(chave: str) -> str:
     mapa = {
         "tagline":      "🎯 Tagline / Perfil",
@@ -667,10 +707,51 @@ descricao_vaga = st.text_area(
     placeholder="Cole aqui os requisitos ou a descrição completa da vaga (LinkedIn, Gupy, etc.)... 🔍",
 )
 
+# ── Análise de Keywords da Vaga ──────────────────────────────────────────────
+if descricao_vaga.strip():
+    kws = analisar_keywords_vaga(descricao_vaga, top_n=25)
+    if kws:
+        max_freq = kws[0][1] if kws else 1
+        st.markdown("""
+        <div style='margin-top: 12px; margin-bottom: 4px;'>
+            <span style='font-size:0.85rem; color:#94a3b8; font-weight:600;'>
+                🔑 Keywords detectadas na vaga
+            </span>
+            <span style='font-size:0.75rem; color:#64748b; margin-left:8px;'>
+                (tamanho = frequência)
+            </span>
+        </div>
+        """, unsafe_allow_html=True)
+        badges_html = "<div style='display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px;'>"
+        for palavra, freq in kws:
+            # Escala de tamanho: 0.7rem a 1.1rem
+            tamanho = 0.70 + (freq / max_freq) * 0.45
+            # Escala de opacidade e cor baseada na frequência
+            if freq == max_freq:
+                cor_bg = "rgba(255, 75, 75, 0.20)"
+                cor_border = "rgba(255, 75, 75, 0.50)"
+                cor_texto = "#ff8888"
+            elif freq >= max_freq * 0.6:
+                cor_bg = "rgba(96, 165, 250, 0.15)"
+                cor_border = "rgba(96, 165, 250, 0.40)"
+                cor_texto = "#93c5fd"
+            else:
+                cor_bg = "rgba(255,255,255,0.05)"
+                cor_border = "rgba(255,255,255,0.12)"
+                cor_texto = "#94a3b8"
+            badges_html += (
+                f"<span style='background:{cor_bg}; border:1px solid {cor_border}; "
+                f"color:{cor_texto}; border-radius:5px; padding:3px 9px; "
+                f"font-size:{tamanho:.2f}rem; font-weight:600; white-space:nowrap;'>"
+                f"{palavra} <span style='font-size:0.65em; opacity:0.7;'>×{freq}</span></span>"
+            )
+        badges_html += "</div>"
+        st.markdown(badges_html, unsafe_allow_html=True)
+
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Escolha do Idioma
-col_lang, _ = st.columns([1, 1])
+# Escolha do Idioma + Modo Delírio
+col_lang, col_delirio = st.columns([1, 1])
 with col_lang:
     idioma = st.selectbox(
         "🌐 Idioma do Currículo Gerado",
@@ -678,6 +759,25 @@ with col_lang:
         index=0,
         key="idioma_resume"
     )
+with col_delirio:
+    modo_delirio = st.toggle(
+        "🔥 Modo Delírio",
+        value=False,
+        key="modo_delirio",
+        help=(
+            "Permite que a IA extrapole habilidades com base na sua experiência real. "
+            "Ela pode incluir termos da vaga que você claramente domina por analogia "
+            "(ex: se você usa PostgreSQL, pode inferir 'bancos relacionais'). "
+            "⚠️ Nunca inventa experiências — apenas expande o vocabulário técnico "
+            "para passar nos filtros ATS/Gupy."
+        )
+    )
+    if modo_delirio:
+        st.markdown(
+            "<p style='font-size:0.75rem; color:#f59e0b; margin-top:4px;'>"
+            "⚡ ATS mode ativo — vocabulário expandido para máxima compatibilidade.</p>",
+            unsafe_allow_html=True
+        )
 
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -742,6 +842,28 @@ if adaptar_btn:
         atualizar_status(passos[2])
         perf_dados_atuais = st.session_state["perfil_edicao"]
         perfil_completo_contexto = compilar_perfil_para_prompt(perf_dados_atuais)
+
+        # Injeta instrução de Modo Delírio no contexto se ativado
+        _modo_delirio_ativo = st.session_state.get("modo_delirio", False)
+        if _modo_delirio_ativo:
+            _instrucao_delirio = (
+                "\n\n[MODO DELÍRIO ATIVO — ATS/GUPY OPTIMIZER]\n"
+                "Você tem PERMISSÃO EXPLÍCITA do candidato para expandir o vocabulário técnico do currículo "
+                "com o objetivo de maximizar a compatibilidade com filtros ATS e sistemas como Gupy. "
+                "Regras:\n"
+                "1. Você PODE incluir termos e tecnologias da vaga que o candidato claramente domina por "
+                "analogia ou equivalência técnica (ex: se usa PostgreSQL → pode incluir 'bancos relacionais', "
+                "'SQL avançado'; se usa n8n → pode incluir 'automação de workflows', 'RPA').\n"
+                "2. Você PODE usar exatamente os mesmos termos da vaga mesmo que o candidato use sinônimos "
+                "(ex: vaga diz 'análise exploratória de dados' e candidato tem EDA → use o termo da vaga).\n"
+                "3. Você NÃO PODE inventar experiências, projetos, empresas, certificados ou métricas "
+                "que não existam no banco de dados do candidato.\n"
+                "4. Nas seções de Skills, inclua TODOS os termos técnicos da vaga que sejam razoavelmente "
+                "compatíveis com o perfil do candidato, mesmo que não estejam explicitamente listados.\n"
+                "5. Priorize a linguagem exata da vaga em detrimento dos termos preferidos do candidato "
+                "quando ambos têm o mesmo significado."
+            )
+            perfil_completo_contexto += _instrucao_delirio
 
         # Chama a API da Maritaca
         blocos_adaptados = adaptar_via_claude(
